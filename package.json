@@ -10,7 +10,7 @@
     "mongoose": "^8.8.0",
     "nodemon": "^3.1.7"
   },
-  "name": "hotel-management-system-main-(2)",
+  "name": "hotel-management-system",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
