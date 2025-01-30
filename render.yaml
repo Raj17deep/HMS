@@ -1,0 +1,63 @@
+services:
+  - type: web
+    name: hms-backend
+    env: node
+    instanceCount: 1
+    instanceSize: micro
+    envVars:
+      - key: MONGODB_URI
+        value: "mongodb+srv://hmsDB-user:hmsDB-user-password@cluster0.42bum.mongodb.net/"
+    buildCommand: npm install
+    startCommand: node server.js
+    sourceDir: raj17deep-hms
+    allowInsecure: true
+
+  - type: web
+    name: hms-frontend
+    env: static
+    instanceCount: 1
+    instanceSize: micro
+    buildCommand: npm run build
+    startCommand: npm start
+    sourceDir: raj17deep-hms
+    routes:
+      - path: /
+        file: index.html
+      - path: /aboutus
+        file: aboutus.html
+      - path: /admin
+        file: admin.html
+      - path: /bookingpage
+        file: bookingpage.html
+      - path: /confirm
+        file: confirm.html
+      - path: /contactus
+        file: contactus.html
+      - path: /dash
+        file: dash.html
+      - path: /dashboard
+        file: dashboard.html
+      - path: /features
+        file: features.html
+      - path: /findaccount
+        file: findaccount.html
+      - path: /mainpage
+        file: mainpage.html
+      - path: /payment
+        file: payment.html
+      - path: /receptionist-login
+        file: receptionist-login.html
+      - path: /register
+        file: register.html
+      - path: /rooms
+        file: rooms.html
+      - path: /rooms2
+        file: rooms2.html
+      - path: /staff
+        file: staff.html
+      - path: /staffattendance
+        file: staffattendance.html
+      - path: /stafflogin
+        file: stafflogin.html
+      - path: /submit
+        file: submit.html
