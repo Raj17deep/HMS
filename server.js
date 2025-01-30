@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public')); // Serve static files from 'public' directory
 
 // MongoDB Connection
-mongoose.connect('mongodb://localhost:27017/hmsDB', {
+mongoose.connect('mongodb+srv://hmsDB-user:hmsDB-user-password@cluster0.42bum.mongodb.net/', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
